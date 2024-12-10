@@ -1,0 +1,44 @@
+header {
+    background-color: aquamarine;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    @media (max-width: 1000px) {
+        background-color: violet;
+    }
+    .container {
+        @include mycontainer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            font-size: 36px;
+            color: $chemiferi;
+        }
+        nav {
+            ul {
+                display: flex;
+                gap: 20px;
+                a {
+                    font-size: 32px;
+                    color: $chemiferi;
+                    &:hover {
+                        background-color: green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.s1 {
+    .container {
+        @include mycontainer;
+        .card {
+            @include chemimixini;
+        }
+        .card2 {
+            @include chemimixini;
+        }
+    }
+}
